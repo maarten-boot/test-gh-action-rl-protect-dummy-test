@@ -31,7 +31,7 @@ jobs:
 
       # ---------------------------------------
       - name: test-gh-action-rl-protect-dummy
-        uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.6
+        uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.7
         id: rl-protect
         env: # pass env var secrets
           RL_TOKEN: 'a-token-value' # RL_TOKEN: ${{ secrets.RL_TOKEN }}
@@ -44,7 +44,7 @@ jobs:
           rl-server: 'data.reversinglabs.com'
           rl-proxy-server: 'some-proxy-server-dns-or-ip'
           rl-proxy-port: 3128
-          rl-proxy-user:  'proxy-user-if-needed'
+          rl-proxy-user: 'proxy-user-if-needed'
           rl-proxy-password: 'proxy-pass-if-needed'
           rl-return-status: true
           rl-no-color: true
