@@ -36,7 +36,7 @@ jobs:
         env: # pass env var secrets
           rl_token: "a-token-value" # RL_TOKEN: ${{ secrets.RL_TOKEN }}
         with: # pass ordinary params
-          rl-item-scan: README.md
+          rl-item-to-scan: README.md
           rl-profile: 'rl-profile.json'
           rl-log-file: 'scan.log'
           rl-check-deps: 'develop,release,optional,transitive'
