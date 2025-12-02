@@ -34,18 +34,18 @@ jobs:
         uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.4
         id: rl-protect
         env: # pass env var secrets
-          rl-token: "a-token-value" # RL_TOKEN: ${{ secrets.RL_TOKEN }}
+          rl-token: 'a-token-value' # RL_TOKEN: ${{ secrets.RL_TOKEN }}
         with: # pass ordinary params
-          rl-item-to-scan: README.md
+          rl-item-to-scan: 'README.md'
           rl-profile: 'rl-profile.json'
           rl-log-file: 'scan.log'
           rl-check-deps: 'develop,release,optional,transitive'
           rl-concise: false
-          rl-server: data.reversinglabs.com
-          rl-proxy-server: "some-proxy-server-dns-or-ip"
-          rl-proxy-port: "3128"
-          rl-proxy-user:  "proxy-user-if-needed"
-          rl-proxy-password: "proxy-pass-if-needed"
+          rl-server: 'data.reversinglabs.com'
+          rl-proxy-server: 'some-proxy-server-dns-or-ip'
+          rl-proxy-port: 3128
+          rl-proxy-user:  'proxy-user-if-needed'
+          rl-proxy-password: 'proxy-pass-if-needed'
           rl-return-status: true
           rl-no-color: true
           rl-verbose: true
