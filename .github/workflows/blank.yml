@@ -42,10 +42,10 @@ jobs:
           rl-check-deps: 'develop,release,optional,transitive'
           rl-concise: false
           rl-server: data.reversinglabs.com
-          rl-proxy-server: ""
-          rl-proxy-port: ""
-          rl-proxy-user:  ""
-          rl-proxy-password: ""
+          rl-proxy-server: "some-proxy-server-dns-or-ip"
+          rl-proxy-port: "3128"
+          rl-proxy-user:  "proxy-user-if-needed"
+          rl-proxy-password: "proxy-pass-if-needed"
           rl-return-status: true
           rl-no-color: true
           rl-verbose: true
