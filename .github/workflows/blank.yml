@@ -32,9 +32,16 @@ jobs:
       # ---------------------------------------
       - name: test-gh-action-rl-protect-dummy
         uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.1
-      
+        id: rl-protect
+        env: # pass env var secrets
+          RL_PORTAL_TOKEN: "a-token-value"
+          # RLSECURE_ENCODED_LICENSE: ${{ secrets.RLSECURE_ENCODED_LICENSE }}
+          # RLSECURE_SITE_KEY: ${{ secrets.RLSECURE_SITE_KEY }}
+        with: # pass ordinary params
+          artifact-to-scan: README.md
+
       # ---------------------------------------
       - name: Run a multi-line script
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+            echo "Status of rl-protect: ${{steps.rl-protect.outputs.status}}"
+            echo "Status of rl-protect: ${{steps.rl-protect.outputs.description}}"
