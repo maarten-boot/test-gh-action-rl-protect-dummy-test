@@ -31,7 +31,7 @@ jobs:
 
       # ---------------------------------------
       - name: test-gh-action-rl-protect-dummy
-        uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.4
+        uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.5
         id: rl-protect
         env: # pass env var secrets
           RL_TOKEN: 'a-token-value' # RL_TOKEN: ${{ secrets.RL_TOKEN }}
