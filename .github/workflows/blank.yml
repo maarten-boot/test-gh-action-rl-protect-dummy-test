@@ -34,11 +34,21 @@ jobs:
         uses: maarten-boot/test-gh-action-rl-protect-dummy@v0.0.1
         id: rl-protect
         env: # pass env var secrets
-          RL_PORTAL_TOKEN: "a-token-value"
-          # RLSECURE_ENCODED_LICENSE: ${{ secrets.RLSECURE_ENCODED_LICENSE }}
-          # RLSECURE_SITE_KEY: ${{ secrets.RLSECURE_SITE_KEY }}
+          rl_token: "a-token-value" # RL_TOKEN: ${{ secrets.RL_TOKEN }}
         with: # pass ordinary params
-          artifact-to-scan: README.md
+          rl-item-scan: README.md
+          rl-profile: 'rl-profile.json'
+          rl-log-file: 'scan.log'
+          rl-check-deps: 'develop,release,optional,transitive'
+          rl-concise: false
+          rl-server: data.reversinglabs.com
+          rl-proxy-server: ""
+          rl-proxy-port: ""
+          rl-proxy-user:  ""
+          rl-proxy-password: ""
+          rl-return-status: true
+          rl-no-color: true
+          rl-verbose: true
 
       # ---------------------------------------
       - name: Run a multi-line script
