@@ -40,7 +40,7 @@ jobs:
           rl-profile: 'rl-profile.json'
           rl-log-file: 'scan.log'
           rl-check-deps: 'develop,release,optional,transitive'
-          rl-concise: false
+          rl-concise: true
           rl-server: 'data.reversinglabs.com'
           rl-proxy-server: 'some-proxy-server-dns-or-ip'
           rl-proxy-port: 3128
